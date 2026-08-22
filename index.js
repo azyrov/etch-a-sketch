@@ -17,7 +17,6 @@ for (let i = 0; i < numSquared; ++i) {
 
     fragment.append(newDiv);
 }
-
 div.append(fragment);
 
 const newDiv = div.childNodes; 
@@ -36,13 +35,14 @@ function setFlexItemsPerLine(itemsPerLine){
         div.style.flexShrink = "0"
     })
 }
+setFlexItemsPerLine(num)
 
-setFlexItemsPerLine(5)
+newDiv.forEach((btn) => {
+    btn.addEventListener("mouseenter", function (e) {
+        this.classList.add("hover");
+    })
 
-
-
-// add btn
-// add prompt to colelct number
-/// the number determines both eidth and height
-// use if to add conditions for max value to prompt
-// store
+    btn.addEventListener("mouseleave", function (e) {
+        this.classList.remove("hover");
+    })
+})
