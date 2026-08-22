@@ -24,9 +24,9 @@ function setFlexItemsPerLine(itemsPerLine){
     newDiv.forEach((div) => {
         div.style.flexBasis = `${percentage}%`;
         // the boxes will grow if they need to 
-        div.style.flexGrow = "1";
+        // div.style.flexGrow = "0";
         // the boxes will shrink if they need to
-        div.style.flexShrink = "1"
+        // div.style.flexShrink = "0"
     })
 }
 setFlexItemsPerLine(num)

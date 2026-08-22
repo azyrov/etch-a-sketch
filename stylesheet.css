@@ -58,7 +58,8 @@ p {
 
 .box {
 /* min-height allows the boxes to shrink into the 100vh of the parent container */
-    min-height: 0;
+/* min-height provides a hard floor that flex shorthand(shrink, grow, basis) are forced to obey */
+    min-height: 1px;
     background-color: red; 
     border: 1px solid black;
 }
