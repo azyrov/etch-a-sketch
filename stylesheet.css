@@ -12,6 +12,7 @@ html {
 body {
   line-height: 1.5;
   background-color: rgba(211, 211, 211, 1);
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,10 +53,12 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0;
+    height: 100vh;
 }
 
 .box {
-    height: 100px;
+/* min-height allows the boxes to shrink into the 100vh of the parent container */
+    min-height: 0;
     background-color: red; 
     border: 1px solid black;
 }

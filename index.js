@@ -1,15 +1,8 @@
 let div = document.querySelector("#container");
 
-
-// store value used for both width and height
-// square that value to get the total number of boxes 
-// use document fragment to create a number of boxesbased on the squared num
-// append created divs to fragment
-// append document fragment to live dom
-
 const fragment = document.createDocumentFragment();
-
-const num = 16;
+let num = +prompt("How many squares per side do you want?", 0)
+// const num = 16;
 const numSquared = num ** 2;
 
 for (let i = 0; i < numSquared; ++i) {
@@ -20,7 +13,6 @@ for (let i = 0; i < numSquared; ++i) {
 div.append(fragment);
 
 const newDiv = div.childNodes; 
-
 newDiv.forEach((div) => {
     div.classList.add("box")
 })
@@ -31,8 +23,10 @@ function setFlexItemsPerLine(itemsPerLine){
 
     newDiv.forEach((div) => {
         div.style.flexBasis = `${percentage}%`;
-        div.style.flexGrow = "0";
-        div.style.flexShrink = "0"
+        // the boxes will grow if they need to 
+        div.style.flexGrow = "1";
+        // the boxes will shrink if they need to
+        div.style.flexShrink = "1"
     })
 }
 setFlexItemsPerLine(num)
