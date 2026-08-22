@@ -12,7 +12,6 @@ html {
 body {
   line-height: 1.5;
   background-color: rgba(211, 211, 211, 1);
-  padding: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,14 +51,13 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
+    gap: 0;
 }
 
 .box {
     height: 100px;
-    background-color: red;
-    flex: 0 0 20%; 
+    background-color: red; 
+    border: 1px solid black;
 }
 
 .hover {
