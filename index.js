@@ -63,3 +63,15 @@ div.append(boxFifteen);
 let boxSixteen = document.createElement("div");
 boxSixteen.classList.add("box");
 div.append(boxSixteen);
+
+let buttons = div.childNodes;
+
+buttons.forEach((btn) => {
+    btn.addEventListener("mouseenter", function (e) {
+        this.classList.add("hover");
+    })
+
+    btn.addEventListener("mouseleave", function (e) {
+        this.classList.remove("hover");
+    })
+})
