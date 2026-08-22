@@ -2,12 +2,10 @@ let div = document.querySelector("#container");
 
 const fragment = document.createDocumentFragment();
 let num = +prompt("How many squares per side do you want?", 0)
-// const num = 16;
 const numSquared = num ** 2;
 
 for (let i = 0; i < numSquared; ++i) {
     const newDiv = document.createElement("div");
-
     fragment.append(newDiv);
 }
 div.append(fragment);
@@ -43,12 +41,12 @@ function randomiseBGColor(div) {
     const b = Math.floor(Math.random() * 256);
 
     div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-}
+}   
 
 newDiv.forEach((btn) => {
-    btn.addEventListener("mouseenter", function (e) {j
-        randomiseBGColor(btn)
-    })
+    btn.addEventListener("mouseenter", function (e) {
+            randomiseBGColor(btn)
+        })
 
     btn.addEventListener("mouseleave", function (e) {
         normalBGColor(btn);
